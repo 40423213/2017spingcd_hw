@@ -1,5 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>2017Spring 協同產品設計實習 (虎尾科大MDE)</title><link href="./" rel="alternate"></link><link href="./feeds/all.atom.xml" rel="self"></link><id>./</id><updated>2017-02-17T11:00:00+08:00</updated><entry><title>Fossil SCM 簡介</title><link href="./intro-fossil-scm.html" rel="alternate"></link><published>2017-02-17T11:00:00+08:00</published><updated>2017-02-17T11:00:00+08:00</updated><author><name>yen</name></author><id>tag:,2017-02-17:./intro-fossil-scm.html</id><summary type="html">&lt;p&gt;Fossil SCM 是一套軟體配置管理 (Software Configuration Management) 系統, 其中包含分散式版次控管 (DVC, Distributed Version Control) 、&lt;a href="http://fossil-scm.org/xfer/doc/trunk/www/wikitheory.wiki"&gt;Wiki&lt;/a&gt; 、&lt;a href="http://fossil-scm.org/xfer/doc/trunk/www/bugtheory.wiki"&gt;Bug Tracking&lt;/a&gt; 與 &lt;a href="http://fossil-scm.org/xfer/doc/trunk/www/event.wiki"&gt;Technote&lt;/a&gt; 等功能, 可以用來控制及追蹤軟體開發專案, 並且紀錄專案開發歷程, 在協同產品設計實習課程中, 我們除了使用 git、github 與 bitbucket 之外, 將要在區域網路與系上主幹中, 配置每班兩台的 Fossil SCM 實習主機.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>2017Spring 協同產品設計實習 (NFU-MDE104B-40423213)</title><link href="./" rel="alternate"></link><link href="./feeds/all.atom.xml" rel="self"></link><id>./</id><updated>2017-04-19T12:00:00+08:00</updated><entry><title>期中作業</title><link href="./%E6%9C%9F%E4%B8%AD%E8%80%83.html" rel="alternate"></link><published>2017-04-19T12:00:00+08:00</published><updated>2017-04-19T12:00:00+08:00</updated><author><name>40423213</name></author><id>tag:,2017-04-19:./期中考.html</id><summary type="html">&lt;iframe src="https://player.vimeo.com/video/213777510" width="640" height="391" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;a href="https://vimeo.com/213777510"&gt;2017-04-19_09-35-39&lt;/a&gt; from &lt;a href="https://vimeo.com/user61454909"&gt;40423213&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;!-- 導入 Brython 標準程式庫 --&gt;
+
+&lt;script type="text/javascript" src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js"&gt;
+&lt;/script&gt;
+
+&lt;!-- 啟動 Brython --&gt;
+
+&lt;script&gt;
+window.onload=function(){
+brython(1);
+}
+&lt;/script&gt;
+
+&lt;!-- 以下實際利用  Brython 畫四連桿 trace point 路徑--&gt;
+
+&lt;canvas id="fourbar" width="600" height="400"&gt;&lt;/canvas&gt;
+
+&lt;div id="container1"&gt;&lt;/div&gt;
+
+&lt;script type="text/python3"&gt;
+from browser import document as doc
+from browser import html
+import math
+# 準備繪圖畫布
+canvas = doc["fourbar"]
+container1 = doc['container1']
+ctx = canvas.getContext("2d")
+
+fourbar_data = open("./../40423213/40423213.csv").read()
+fourbar_list = fourbar_data.splitlines()
+#container1 &lt;= fourbar_list[0]
+# 以下可以利用 ctx 物件進行畫圖
+# 先畫一條直線
+ctx.beginPath()
+# 設定線的寬度為 1 個單位
+ctx.lineWidth = 1
+# 利用 transform 將 y 座標反轉, 且 offset canvas.height
+# (X scale, X skew, Y skew, Y scale, X offset, Y offset)
+# 配合圖形位置進行座標轉換
+ctx.transform(1, 0, 0, -1, canvas.width/2+250, canvas.height/2+100)
+# 畫出 x 與 y 座標線
+# 各座標值放大 8 倍
+ratio = 4
+ctx.moveTo(0, 0)
+ctx.lineTo(-30*ratio, 0)
+start_point = fourbar_list[0].split(",")
+ctx.moveTo(float(start_point[0])*ratio, float(start_point[1])*ratio)
+count = 0
+for data in fourbar_list[1:]:
+    point = data.split(",")
+    #count = count + 1
+    #container1 &lt;= str(count) + ":" + point[0] + "," + point[1]
+    #container1 &lt;= html.BR()
+    ctx.lineTo(float(point[0])*ratio, float(point[1])*ratio)
+# 設定顏色為藍色, 也可以使用 "rgb(0, 0, 255)" 字串設定顏色值
+ctx.strokeStyle = "blue"
+# 實際執行畫線
+ctx.stroke()
+ctx.closePath()
+&lt;/script&gt;&lt;/p&gt;</summary><category term="teach"></category></entry><entry><title>20170301 Week 2</title><link href="./Week%202.html" rel="alternate"></link><published>2017-03-01T12:00:00+08:00</published><updated>2017-03-01T12:00:00+08:00</updated><author><name>40423213</name></author><id>tag:,2017-03-01:./Week 2.html</id><summary type="html">&lt;h2&gt;運用solvespace繪製四連桿機構&lt;/h2&gt;
+&lt;p&gt;&lt;iframe src="https://player.vimeo.com/video/209499407" width="640" height="428" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href="https://vimeo.com/209499407"&gt;四連桿機構&lt;/a&gt; from &lt;a href="https://vimeo.com/user61454909"&gt;40423213&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;零件繪製完成後，繪製組立支架，再將零件依序放置上去完成配合。&lt;p&gt;&lt;/p&gt;
+
+
+&lt;h2&gt;零件1&lt;/h2&gt;
+&lt;p&gt;&lt;iframe src="https://player.vimeo.com/video/208428757" width="640" height="428" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href="https://vimeo.com/208428757"&gt;week2 零件1&lt;/a&gt; from &lt;a href="https://vimeo.com/user61454909"&gt;40423213&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;繪製一30mm長的零件&lt;p&gt;&lt;/p&gt;
+&lt;h2&gt;零件2&lt;/h2&gt;
+&lt;p&gt;&lt;iframe src="https://player.vimeo.com/video/208428759" width="640" height="428" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href="https://vimeo.com/208428759"&gt;week2 零件2&lt;/a&gt; from &lt;a href="https://vimeo.com/user61454909"&gt;40423213&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;繪製一50mm長的零件&lt;p&gt;&lt;/p&gt;
+&lt;h2&gt;零件3&lt;/h2&gt;
+&lt;p&gt;&lt;iframe src="https://player.vimeo.com/video/208428779" width="640" height="428" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href="https://vimeo.com/208428779"&gt;week2 零件3&lt;/a&gt; from &lt;a href="https://vimeo.com/user61454909"&gt;40423213&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;繪製一60mm長的零件&lt;p&gt;
+&lt;p&gt;心得: 按照作業要求完成零件的繪製，但Solvespace功能太簡略，依然用不順手。&lt;/p&gt;&lt;/p&gt;</summary><category term="teach"></category></entry><entry><title>20170223 Week 1</title><link href="./Week%201.html" rel="alternate"></link><published>2017-02-23T12:00:00+08:00</published><updated>2017-02-23T12:00:00+08:00</updated><author><name>40423213</name></author><id>tag:,2017-02-23:./Week 1.html</id><summary type="html">&lt;p&gt;修改stunnel.conf的IP設定&lt;/p&gt;
+
+&lt;p&gt;開啟命令提示字元，輸入"ipconfig/all"&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="../data/11.png" width="800" /&gt;
+
+&lt;p&gt;找到IPv4位址，將IP複製至SciTE存放&lt;/p&gt;
+&lt;p&gt;至tiny2017_1GB/data/stunnel/config將stunnel.conf檔案拖曳至SciTE開啟&lt;/p&gt;
+&lt;img src="../data/12.png" width="800" /&gt;
+&lt;p&gt;拉至下方，將檔案內的IP修改成正確IP&lt;/p&gt;
+&lt;img src="../data/13.png" width="800" /&gt;
+&lt;p&gt;儲存並關閉，之後再重啟start就成功了&lt;/p&gt;
+&lt;p&gt;心得: 運用ipconfig/all指令來搜尋自身IP，既方便又省時&lt;/p&gt;</summary><category term="teach"></category></entry><entry><title>Fossil SCM 簡介</title><link href="./intro-fossil-scm.html" rel="alternate"></link><published>2017-02-17T11:00:00+08:00</published><updated>2017-02-17T11:00:00+08:00</updated><author><name>yen</name></author><id>tag:,2017-02-17:./intro-fossil-scm.html</id><summary type="html">&lt;p&gt;Fossil SCM 是一套軟體配置管理 (Software Configuration Management) 系統, 其中包含分散式版次控管 (DVC, Distributed Version Control) 、&lt;a href="http://fossil-scm.org/xfer/doc/trunk/www/wikitheory.wiki"&gt;Wiki&lt;/a&gt; 、&lt;a href="http://fossil-scm.org/xfer/doc/trunk/www/bugtheory.wiki"&gt;Bug Tracking&lt;/a&gt; 與 &lt;a href="http://fossil-scm.org/xfer/doc/trunk/www/event.wiki"&gt;Technote&lt;/a&gt; 等功能, 可以用來控制及追蹤軟體開發專案, 並且紀錄專案開發歷程, 在協同產品設計實習課程中, 我們除了使用 git、github 與 bitbucket 之外, 將要在區域網路與系上主幹中, 配置每班兩台的 Fossil SCM 實習主機.&lt;/p&gt;
 
 
 &lt;h2&gt;Fossil SCM&lt;/h2&gt;
@@ -1086,7 +1179,7 @@ document["get_ver_and_kw"].bind("click", get_ver_and_kw)
 &lt;p&gt;(三) 上課出席與表現 (各學員根據實際內容舉證自評成績 * 老師認可百分比) (30%)&lt;/p&gt;
 &lt;h2&gt;協同產品設計實習各週上課日期&lt;/h2&gt;
 &lt;p&gt;2017 Spring  08:10-12:00 各週上課日期:&lt;/p&gt;
-&lt;p&gt;&lt;span style="background-color: #ffff00"&gt;w1&lt;/span&gt;-2/22 2b (三) &amp;amp; 2/23 2a (四) - 請每人準備一個隨身碟, &lt;span style="background-color: #55ff55"&gt;&lt;a href="http://service.mde.tw/public/tiny2017_40MB.7z"&gt;下載&lt;/a&gt;&lt;/span&gt;可攜程式系統 (40MB) (或從倉儲中&lt;span style="background-color: #55ff55"&gt;&lt;a href="./../data/tiny2017.7z"&gt;下載&lt;/a&gt;&lt;/span&gt;). 接著請&lt;span style="background-color: #55ff55"&gt;&lt;a href="http://service.mde.tw/public/Onshape_help.pdf"&gt;下載&lt;/a&gt;&lt;/span&gt; Onshape_help.pdf (17.2 MB), 了解如何利用 &lt;a href="http://solvespace.com"&gt;Solvespace&lt;/a&gt; 與 &lt;a href="https://www.onshape.com/"&gt;Onshape&lt;/a&gt; 組立單軸旋轉連桿系統、四連桿系統與&lt;a href="http://solvespace.com/linkage.pl"&gt;多連桿系統&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span style="background-color: #ffff00"&gt;w1&lt;/span&gt;-2/22 2b (三) &amp;amp; 2/23 2a (四) - 請每人準備一個隨身碟, &lt;span style="background-color: #55ff55"&gt;&lt;a href="http://service.mde.tw/public/tiny2017_1GB.7z"&gt;下載&lt;/a&gt;&lt;/span&gt;可攜程式系統 (1GB). 接著請&lt;span style="background-color: #55ff55"&gt;&lt;a href="http://service.mde.tw/public/Onshape_help.pdf"&gt;下載&lt;/a&gt;&lt;/span&gt; Onshape_help.pdf (17.2 MB), 了解如何利用 &lt;a href="http://solvespace.com"&gt;Solvespace&lt;/a&gt; 與 &lt;a href="https://www.onshape.com/"&gt;Onshape&lt;/a&gt; 組立單軸旋轉連桿系統、四連桿系統與&lt;a href="http://solvespace.com/linkage.pl"&gt;多連桿系統&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;span style="background-color: #ffff00"&gt;w2&lt;/span&gt;-3/1 2b (三) &amp;amp; 3/2 2a (四) - 每班分為八組, 每四組分配一台 8GB Ram/500GB HD 電腦作為 IPv4/IPv6 伺服器, 了解如何利用 IPv4 與 IPv6 網路連線傳輸設計檔案. 各組 CMSimfly 區域網站的應用. 各組以協同模式完成&lt;a href="http://solvespace.com"&gt;Solvespace&lt;/a&gt; 與 &lt;a href="https://www.onshape.com/"&gt;Onshape&lt;/a&gt; 單軸旋轉連桿系統與四連桿系統.&lt;/p&gt;
 &lt;p&gt;&lt;span style="background-color: #ffff00"&gt;w3&lt;/span&gt;-3/8 2b (三) &amp;amp; 3/9 2a (四) - 各組以協同模式完成 &lt;a href="http://solvespace.com"&gt;Solvespace&lt;/a&gt; 與 &lt;a href="https://www.onshape.com/"&gt;Onshape&lt;/a&gt; 之 &lt;a href="http://solvespace.com/linkage.pl"&gt;多連桿系統&lt;/a&gt;組立. 各組完成廣域網路與 &lt;a href="https://pages.github.com/"&gt;Github Pages&lt;/a&gt; 網頁與簡報呈現各組學員與分組協同工作流程細節.&lt;/p&gt;
 &lt;p&gt;&lt;span style="background-color: #ffff00"&gt;w4&lt;/span&gt;-3/15 2b (三) &amp;amp; 3/14 2a (四) - 單連桿與四連桿機構轉入 V-rep 進行運動模擬 &lt;button onClick="lity('https://player.vimeo.com/video/203463280')"&gt;&lt;span class="glyphicon glyphicon-facetime-video"&gt;&lt;/span&gt; 單連桿&lt;/button&gt;&lt;/p&gt;

@@ -5,35 +5,56 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>./</loc>
-<lastmod>2017-02-19T23:09:25-00:00</lastmod>
+<lastmod>2017-04-19T10:34:10-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>./archives.html</loc>
-<lastmod>2017-02-19T23:09:25-00:00</lastmod>
+<lastmod>2017-04-19T10:34:10-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>./tags.html</loc>
-<lastmod>2017-02-19T23:09:25-00:00</lastmod>
+<lastmod>2017-04-19T10:34:10-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>./categories.html</loc>
-<lastmod>2017-02-19T23:09:25-00:00</lastmod>
+<lastmod>2017-04-19T10:34:10-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>./pages/about/</loc>
-<lastmod>2017-02-18T01:31:55+08:00</lastmod>
+<lastmod>2017-04-19T09:43:23+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>./期中考.html</loc>
+<lastmod>2017-04-19T12:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>./Week 2.html</loc>
+<lastmod>2017-03-01T12:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>./Week 1.html</loc>
+<lastmod>2017-02-23T12:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -68,28 +89,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>./category/course.html</loc>
-<lastmod>2017-02-17T11:00:00+08:06</lastmod>
+<lastmod>2017-04-19T12:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>./tag/syllabus.html</loc>
-<lastmod>2017-01-08T11:00:00+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>./tag/brython.html</loc>
+<loc>./tag/w1.html</loc>
 <lastmod>2017-02-07T11:00:00+08:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>./tag/v-rep.html</loc>
-<lastmod>2017-02-09T11:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -102,6 +109,20 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>./tag/brython.html</loc>
+<lastmod>2017-02-07T11:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>./tag/syllabus.html</loc>
+<lastmod>2017-01-08T11:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>./tag/w2.html</loc>
 <lastmod>2017-02-17T11:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
@@ -109,8 +130,22 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>./tag/w1.html</loc>
-<lastmod>2017-02-07T11:00:00+08:06</lastmod>
+<loc>./tag/v-rep.html</loc>
+<lastmod>2017-02-09T11:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>./tag/teach.html</loc>
+<lastmod>2017-04-19T12:00:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>./author/40423213.html</loc>
+<lastmod>2017-04-19T12:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
