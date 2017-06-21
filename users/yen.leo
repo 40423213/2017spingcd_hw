@@ -27,20 +27,26 @@
 <v t="yen.20170215103332.1"><vh>@edit base.html</vh></v>
 </v>
 </v>
-<v t="yen.20170120110024.1"><vh>@clean index.html</vh>
+<v t="yen.20170120110024.1" a="E"><vh>@clean index.html</vh>
 <v t="yen.20170120110024.2" a="E"><vh>html</vh>
 <v t="yen.20170120110024.3"><vh>head</vh></v>
 <v t="yen.20170120110024.4" a="E"><vh>body</vh>
 <v t="yen.20170120110024.5" a="E"><vh>reveal div</vh>
 <v t="yen.20170120110024.6" a="E"><vh>slides div</vh>
-<v t="yen.20170120110024.7"><vh>封面投影片</vh>
+<v t="yen.20170120110024.7" a="E"><vh>封面投影片</vh>
 <v t="yen.20170120110024.8"><vh>封面投影片內容</vh></v>
 </v>
-<v t="yen.20170120110024.9"><vh>快捷鍵</vh>
+<v t="yen.20170120110024.9" a="E"><vh>快捷鍵</vh>
 <v t="yen.20170120110024.10"><vh>投影片快捷鍵</vh></v>
 </v>
 <v t="leo.20170222114233.1" a="E"><vh>20170222Week1</vh>
-<v t="leo.20170222114233.2"><vh>上課內容1</vh></v>
+<v t="leo.20170621084411.2"><vh>上課內容1</vh></v>
+</v>
+<v t="leo.20170621084451.1" a="E"><vh>20170222Week2</vh>
+<v t="leo.20170621084451.2"><vh>上課內容1</vh></v>
+</v>
+<v t="leo.20170621084456.1" a="E"><vh>20170222Week3</vh>
+<v t="leo.20170621084456.2"><vh>上課內容1</vh></v>
 </v>
 <v t="yen.20170120110024.11"><vh>各式內容引用範例</vh>
 <v t="yen.20170120110024.12"><vh>導入數學符號與方程式</vh>
@@ -58,7 +64,7 @@
 </v>
 </v>
 </v>
-<v t="yen.20170108171733.71" a="E"><vh>@path content</vh>
+<v t="yen.20170108171733.71"><vh>@path content</vh>
 <v t="leo.20170226215021.1"><vh>@edit 20170223.md</vh></v>
 <v t="leo.20170419100245.1"><vh>@edit 20170419.md</vh></v>
 <v t="leo.20170517110459.1"><vh>@edit 20170517.md</vh></v>
@@ -72,7 +78,7 @@
 <v t="yen.20170217105706.1"><vh>@edit 20170217.md</vh></v>
 <v t="leo.20170412094832.1"><vh>@edit 20170301.md</vh></v>
 <v t="leo.20170614102254.1"><vh>@edit 20170614.md</vh></v>
-<v t="yen.20170108171733.81" a="E"><vh>@path pages</vh>
+<v t="yen.20170108171733.81"><vh>@path pages</vh>
 <v t="yen.20170108171733.82"><vh>@edit pages_1.md</vh></v>
 </v>
 </v>
@@ -80,7 +86,7 @@
 </v>
 <v t="yen.20170108171930.1"><vh>@button https server</vh></v>
 <v t="yen.20170108171939.1"><vh>@button ipv6 https server</vh></v>
-<v t="yen.20170120212350.1" a="E"><vh>programs</vh>
+<v t="yen.20170120212350.1"><vh>programs</vh>
 <v t="yen.20170210153828.1"><vh>v-rep rempte api</vh>
 <v t="yen.20170210202015.1"><vh>Python remote API</vh></v>
 <v t="yen.20170210170248.1"><vh>line tracer</vh></v>
@@ -93,7 +99,7 @@
 <v t="yen.20170120232548.1"><vh>calendar example</vh></v>
 <v t="yen.20170123204227.1"><vh>印出月曆以及各課程上課日期</vh></v>
 <v t="yen.20170207092354.1"><vh>協同程式參考</vh></v>
-<v t="yen.20170124102405.1" a="E"><vh>chat</vh>
+<v t="yen.20170124102405.1"><vh>chat</vh>
 <v t="yen.20170124102433.1"><vh>index.html</vh></v>
 </v>
 </v>
@@ -109,25 +115,52 @@
 
 						
 </t>
-<t tx="leo.20170222114233.2"># 上課內容
+<t tx="leo.20170621084411.2"># 修改stunnel.conf的IP設定
 
-tiny2017 - with_pip\data\stunnel\config的stunnel.conf檔案
+為了在自家的電腦開啟tiny2017_1GB裡的start
 
-stunnel.conf移到SciTE
+需先將檔案內原先的IP修改成自己的IP位置
 
-程式碼前面是分號 就是註解不會執行那段程式碼
+修改完成後，即能開啟start</t>
+<t tx="leo.20170621084451.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
 
-利用cmd查IP(ipconfig /all)
 
-將https的IP改為電腦的IP(第138行)
-
-443是https內建的port號, 不用改
-
-因為有用proxy所以要指定192.168.1.49的IP不要經過proxy                                              
-Chrome proxy設定&gt;LAN設定&gt;進階
-
-2017springcd/data/onelink_vrep_remoteapi_pos_vel.7z
+						
 </t>
+<t tx="leo.20170621084451.2"># 運用solvespace繪製四連桿機構
+
+繪製一30、50、60mm長的零件
+
+零件繪製完成後，繪製組立支架，再將零件依序放置上去完成配合</t>
+<t tx="leo.20170621084456.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20170621084456.2"># 繪製行走機構
+
+繪製尺寸100X60的長方形框件
+
+繪製尺寸60X10的長連桿，作為物體作動的支撐桿
+
+繪製尺寸Φ4X10的圓桿，為連接處做固定
+
+組合步驟
+開啟onshape，將所需零件擺放至一旁
+
+將長方形框件挖的洞與長連桿做配合
+
+將圓桿作為螺栓，依序把連接處固定住
+
+運用轉動特徵，查驗結果</t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
@@ -281,14 +314,12 @@ make.start()</t>
 @others
 
 </t>
-<t tx="yen.20170120110024.10"># 投影片快捷鍵
+<t tx="yen.20170120110024.10"># 期末報告
 
-* 利用箭頭上下前後換頁
-* 按 f 鍵進入全螢幕模式 (full screen)
-* 按 s 鍵可以顯示投影片筆記 (show)
-* 按 o 鍵可以切換單張或全域檢視 (overview)
-* 按 b 或 . 鍵可以切換螢幕黑屏 (black)
-* 按 Esc 可以退出全螢幕或全域檢視 (Escape)
+* 修改stunnel.conf的IP設定
+* 運用solvespace繪製四連桿機構
+* 繪製行走機構
+
 
 </t>
 <t tx="yen.20170120110024.11">&lt;section&gt;
